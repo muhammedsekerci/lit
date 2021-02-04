@@ -38,7 +38,7 @@ defmodule Mix.Lit do
     #   """)
     # end
 
-    %{otp_app: otp_app, default_web_namespace: "Admin"}
+    %{otp_app: otp_app, default_web_namespace: "Admin" , format: "eex"}
   end
 
   def ensure_phoenix_is_loaded!(mix_task \\ "task") do
