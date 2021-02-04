@@ -6,8 +6,8 @@ defmodule Mix.Lit do
   def parse_config!(task, args) do
     {opts, _, _} = OptionParser.parse(args, switches: [default_web_namespace: :string, app: :string])
 
-    # format = convert_format(opts[:format] || Config.template_format())
-    # default_web_namespace = opts[:default_web_namespace] || "Admin"
+    format = convert_format(opts[:format] || Config.template_format())
+    default_web_namespace = opts[:default_web_namespace] || "Admin"
     otp_app = opts[:app] || Config.otp_app()
 
     unless otp_app do
@@ -38,7 +38,7 @@ defmodule Mix.Lit do
     #   """)
     # end
 
-    %{otp_app: otp_app, default_web_namespace: "Admin" , format: "eex"}
+    %{otp_app: otp_app, default_web_namespace: default_web_namespace , format: format}
   end
 
   def ensure_phoenix_is_loaded!(mix_task \\ "task") do
