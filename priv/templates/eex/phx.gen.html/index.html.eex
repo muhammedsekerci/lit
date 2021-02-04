@@ -24,9 +24,9 @@
 <%= for {k, _} <- schema.attrs do %>              <td class="py-3"><%%= <%= schema.singular %>.<%= k %> %></td>
 <% end %>
               <td class="py-3 text-right">
-                <span><%%= link "Show", to: Routes.<%= schema.route_helper %>_path(@conn, :show, <%= schema.singular %>, class: "text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none") %></span>
-                <span><%%= link "Edit", to: Routes.<%= schema.route_helper %>_path(@conn, :edit, <%= schema.singular %>), class: "text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none" %></span>
-                <span><%%= link "Delete", to: Routes.<%= schema.route_helper %>_path(@conn, :delete, <%= schema.singular %>), method: :delete, data: [confirm: "Are you sure?"], class: "text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none" %></span>
+                <span><%%= link gettext("Show"), to: Routes.<%= schema.route_helper %>_path(@conn, :show, <%= schema.singular %>, class: "text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none") %></span>
+                <span><%%= link gettext("Edit"), to: Routes.<%= schema.route_helper %>_path(@conn, :edit, <%= schema.singular %>), class: "text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none" %></span>
+                <span><%%= link gettext("Delete"), to: Routes.<%= schema.route_helper %>_path(@conn, :delete, <%= schema.singular %>), method: :delete, data: [confirm: "Are you sure?"], class: "text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none" %></span>
               </td>
             </tr>
 <%% end %>
@@ -71,8 +71,8 @@
             </div>
           </div>
 <% end %>          <div>
-            <button type="submit" class="inline-flex items-center px-4 py-2 text-sm text-white bg-yellow-600 border border-transparent rounded hover:bg-yellow-500 focus:outline-none focus:border-yellow-600 focus:shadow-outline-yellow active:bg-yellow-600 transition duration-150 ease-in-out">Search</button>
-            <%%= link "Clear Filters", to: Routes.<%= schema.route_helper %>_path(@conn, :index), class: "px-4 py-2 text-sm font-medium text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none focus:shadow-outline-white transition duration-150 ease-in-out inline-flex items-center ml-1" %>
+  <button type="submit" class="inline-flex items-center px-4 py-2 text-sm text-white bg-yellow-600 border border-transparent rounded hover:bg-yellow-500 focus:outline-none focus:border-yellow-600 focus:shadow-outline-yellow active:bg-yellow-600 transition duration-150 ease-in-out"><%= gettext "Search" %> </button>
+            <%%= link gettext("Clear Filters"), to: Routes.<%= schema.route_helper %>_path(@conn, :index), class: "px-4 py-2 text-sm font-medium text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none focus:shadow-outline-white transition duration-150 ease-in-out inline-flex items-center ml-1" %>
           </div>
         <%% end %>
       </div>

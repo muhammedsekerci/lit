@@ -15,8 +15,8 @@
 <% end %>
       </div>
       <div class="px-4 py-3 border-t">
-        <%%= link "Edit", to: Routes.<%= schema.route_helper %>_path(@conn, :edit, @<%= schema.singular %>), class: "px-4 py-2 text-sm font-medium text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none focus:shadow-outline-white transition duration-150 ease-in-out inline-flex items-center" %>
-        <%%= link "Back", to: Routes.<%= schema.route_helper %>_path(@conn, :index), class: "px-4 py-2 text-sm font-medium text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none focus:shadow-outline-white transition duration-150 ease-in-out inline-flex items-center" %>
+        <%%= link gettext("Edit"), to: Routes.<%= schema.route_helper %>_path(@conn, :edit, @<%= schema.singular %>), class: "px-4 py-2 text-sm font-medium text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none focus:shadow-outline-white transition duration-150 ease-in-out inline-flex items-center" %>
+        <%%= link gettext("Back"), to: Routes.<%= schema.route_helper %>_path(@conn, :index), class: "px-4 py-2 text-sm font-medium text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none focus:shadow-outline-white transition duration-150 ease-in-out inline-flex items-center" %>
       </div>
     </div>
   </div>
