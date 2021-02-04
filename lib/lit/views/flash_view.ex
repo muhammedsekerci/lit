@@ -24,12 +24,6 @@ defmodule Lit.FlashView do
   """
   @spec flash_message(Plug.Conn.t(), type :: atom | String.t()) :: Phoenix.HTML.safe()
   def flash_message(conn, type) do
-    message = get_flash(conn, type)
-
-    if message do
-      content_tag :p, class: "lit-flash #{type}" do
-        raw("#{message} <button class='lit-flash-close'>x</button>")
-      end
-    end
+    get_flash(conn, type)
   end
 end
