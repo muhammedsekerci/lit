@@ -3,7 +3,7 @@
     <div class="bg-white rounded shadow">
       <div class="flex items-center justify-between px-4 py-3 border-b">
         <h5 class="text-lg font-medium text-gray-700">
-          <%= gettext "New" %> <%= String.capitalize(schema.human_singular) %>
+           New  <%= String.capitalize(schema.human_singular) %>
         </h5>
       </div>
       <div class="px-4 py-3 text-gray-600">

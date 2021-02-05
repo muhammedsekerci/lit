@@ -24,9 +24,9 @@
 <%= for {k, _} <- schema.attrs do %>              <td class="py-3"><%%= <%= schema.singular %>.<%= k %> %></td>
 <% end %>
               <td class="py-3 text-right">
-                <span><%%= link gettext("Show"), to: Routes.<%= schema.route_helper %>_path(@conn, :show, <%= schema.singular %>, class: "text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none") %></span>
-                <span><%%= link gettext("Edit"), to: Routes.<%= schema.route_helper %>_path(@conn, :edit, <%= schema.singular %>), class: "text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none" %></span>
-                <span><%%= link gettext("Delete"), to: Routes.<%= schema.route_helper %>_path(@conn, :delete, <%= schema.singular %>), method: :delete, data: [confirm: "Are you sure?"], class: "text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none" %></span>
+                <span><%%= link "Show" , to: Routes.<%= schema.route_helper %>_path(@conn, :show, <%= schema.singular %>, class: "text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none") %></span>
+                <span><%%= link "Edit" , to: Routes.<%= schema.route_helper %>_path(@conn, :edit, <%= schema.singular %>), class: "text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none" %></span>
+                <span><%%= link "Delete" , to: Routes.<%= schema.route_helper %>_path(@conn, :delete, <%= schema.singular %>), method: :delete, data: [confirm: "Are you sure?"], class: "text-blue-700 active:text-blue-700 hover:text-blue-400 focus:outline-none" %></span>
               </td>
             </tr>
 <%% end %>
