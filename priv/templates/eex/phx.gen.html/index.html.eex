@@ -32,8 +32,8 @@
 <%% end %>
           </tbody>
         </table>
-
-        <bg-white rounded%%= render Lit.PaginationView, "_pagination.html", assigns %>
+         
+         <%= render Lit.PaginationView, "_pagination.html", assigns %>
       </div>
     </div>
   </div>
