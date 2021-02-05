@@ -112,7 +112,7 @@
       </nav>
 
       <main>
-        <%= Lit.FlashView.render("_flash_messages.html", assigns) %>
+        <%# <%= Lit.FlashView.render("_flash_messages.html", assigns) %1> %>
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <%= @inner_content %>
         </div>
