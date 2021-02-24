@@ -33,7 +33,7 @@
           </tbody>
         </table>
          
-         <%= render Lit.PaginationView, "_pagination.html", assigns %>
+         <%%= render Lit.PaginationView, "_pagination.html", assigns %>
       </div>
     </div>
   </div>
