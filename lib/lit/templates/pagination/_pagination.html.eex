@@ -1,21 +1,21 @@
 <% distance = Map.get(@conn.assigns, :distance, 5) %>
 <nav id="lit-pagination" class="relative z-0  justify-center flex shadow-sm -space-x-px" aria-label="Pagination">
 
-  <div class="hidden md:inline-flex relative items-center px-4 py-2 <%= if @page_number != 1 , do: "border" , else: "" %>   border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50" >
+  <div class="md:inline-flex relative items-center px-4 py-2 <%= if @page_number != 1 , do: "border" , else: "" %>   border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50" >
     <%= prev_link(@conn, @page_number) %>
   </div>
 
   <%= if @total_pages > 1 do %>
     <%= for num <- start_page(@page_number, distance)..end_page(@page_number, @total_pages, distance) do %>
 
-      <a class="hidden md:inline-flex relative items-center px-4 py-2 border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 <%= if @page_number == num, do: "bg-yellow-300", else: "bg-white" %>" href="?<%= querystring( @conn, page: num, sort_opts: sort_opts(@conn.assigns) ) %>" >
+      <a class="md:inline-flex relative items-center px-4 py-2 border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 <%= if @page_number == num, do: "bg-yellow-300", else: "bg-white" %>" href="?<%= querystring( @conn, page: num, sort_opts: sort_opts(@conn.assigns) ) %>" >
         <%= num %>
       </a>
 
     <% end %>
   <% end %>
 
-  <div  class="hidden md:inline-flex relative items-center px-4 py-2  <%= if @page_number != @total_pages , do: "border" , else: "" %>    border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50" >
+  <div  class="md:inline-flex relative items-center px-4 py-2  <%= if @page_number != @total_pages , do: "border" , else: "" %>    border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50" >
     <%= next_link(@conn, @page_number, @total_pages) %>
   </div>
 
