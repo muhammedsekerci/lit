@@ -8,7 +8,7 @@
   <%= if @total_pages > 1 do %>
     <%= for num <- start_page(@page_number, distance)..end_page(@page_number, @total_pages, distance) do %>
 
-      <a class="md:inline-flex relative items-center px-4 py-2 border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 <%= if @page_number == num, do: "bg-yellow-300", else: "bg-white" %>" href="?<%= querystring( @conn, page: num, sort_opts: sort_opts(@conn.assigns) ) %>" >
+      <a style="<%= if @page_number == num, do: "background-color:#babad5", else: "" %>" class="md:inline-flex relative items-center px-4 py-2 border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 <%= if @page_number == num, do: "bg-yellow-300", else: "bg-white" %>" href="?<%= querystring( @conn, page: num, sort_opts: sort_opts(@conn.assigns) ) %>" >
         <%= num %>
       </a>
 
